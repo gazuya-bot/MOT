@@ -49,6 +49,11 @@ small{font-size:80%}
 /* ログインアイコン */
 .login-logo img{width: 180px;}
 
+/* ログインアイコン */
+.login-logo{
+    text-align: center;
+}
+
 /* 売上ポイント入力ボックスサイズ */
 .inbox-size{max-width:1300px;margin:6% auto;}
 
@@ -71,7 +76,7 @@ small{font-size:80%}
 a.new_member{color: #000 !important;}
 a.new_member:hover{color: rgb(45, 143, 255) !important;}
 
-a.nav-link {font-size: 18px;}
+.login-back a.nav-link {color: rgb(45, 143, 255)!important;font-size: 18px;}
 
 /* 会員登録ボタン */
 .signup-btn{margin-top: 30px;}
@@ -81,9 +86,9 @@ ul.nav-item {list-style: none!important;}
 
 /* 販売ポイント入力画面調整 */
 
-.card-body{padding-top: 50px;}
+.card-body{padding-top: 0;}
 
-.card{box-shadow: none;}
+.card{box-shadow: none;border: none;}
 
 .short-link{padding-top: 7px;}
 
