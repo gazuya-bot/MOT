@@ -1,0 +1,285 @@
+/**
+ベースメニューのスタイル 
+**/
+
+/* トップヘッダー背景色 */
+.main-header{background-color:#343a40;}
+
+/* トップヘッダー文字色 */
+a.nav-link{color: #fff !important;font-size: 18px;}
+
+/* ロゴ調整 */
+.main-sidebar img{width: 50px;margin: 7px 0 0 5px;}
+
+/* メインコンテンツ位置調整 */
+.card-primary{margin-top: 10px;}
+
+/* テキストエリアのサイズ変更不可 */
+textarea{resize: none;}
+
+/* フッター位置調整 */
+footer{text-align:center;}
+
+
+/* ログイン名フォント調整 */
+b,strong{font-weight:bolder;font-size:28px;}
+small{font-size:80%}
+
+/* ログインボックスの位置 */
+.login-page,.register-page{-ms-flex-align:center;align-items:center;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;height:100vh;-ms-flex-pack:center;justify-content:center} 
+
+/* ログインボックスの幅 */
+/* .login-box,.register-box */
+.login-box,.register-box
+{
+    max-width:360px;
+    height: 500px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* ログイン画面背景色 */
+.login-page, .register-page {background-color: #ffffff !important;}
+
+/* ログインアイコン */
+.login-logo img{width: 180px;}
+
+/* 売上ポイント入力ボックスサイズ */
+.inbox-size{max-width:1300px;margin:6% auto;}
+
+/* 売上ポイント入力画面バックグラウンドカラー */
+.content-wrapper{background-color: #ffffff;}
+
+/* インプットボックスのマージン */
+.form-group{margin-bottom: 30px;}
+
+
+/* パスワード記憶 */
+.form-check {text-align: center;}
+
+/* ログイン入力ボックスマージン調整 */
+.input-group {margin-top: 30px!important;}
+
+.re-p {margin-top: 10px;}
+
+/* ログイン・会員登録リンク */
+a.new_member{color: #000 !important;}
+a.new_member:hover{color: rgb(45, 143, 255) !important;}
+
+a.nav-link {font-size: 18px;}
+
+/* 会員登録ボタン */
+.signup-btn{margin-top: 30px;}
+
+ul.nav-item {list-style: none!important;}
+
+
+/* 販売ポイント入力画面調整 */
+
+.card-body{padding-top: 50px;}
+
+.card{box-shadow: none;}
+
+.short-link{padding-top: 7px;}
+
+
+/* フッター下非表示 */
+
+b, strong {
+    font-size: 20px;
+}
+
+.content-wrapper {background-color: #ffffff};
+
+/* メニュー選択時 */
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:focus, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:hover {
+    background-color: rgba(61, 60, 60, 0.9);
+    color: rgba(61, 60, 60, 0.9);
+}
+
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:focus, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:hover {
+    background-color: rgba(10, 125, 233, 0.5);
+}
+
+
+/* ボタン */
+.card-footer:last-child {
+    background-color: #fff;
+}
+
+.login-back{
+    text-align: center;
+    margin-top:20px
+}
+
+/* インプットボックス横ボタン */
+.btn-side{
+    border-radius:10px;
+    margin: 0 20%;
+    width: 40px;
+}
+
+
+/* 売上登録用ボタン */
+.input-btn{
+    margin-top: 20px;
+}
+
+.add-box{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.inpoint-box input, select{
+    margin-bottom: 30px;
+}
+
+/* 備考× */
+/* .inpoint-box span {color: red} */
+
+/* 備考 */
+.sell-ex {font-size: 12px;margin: 3px;}
+
+/* トップヘッダー背景色 */
+.main-header{background-color:#343a40;}
+
+/* トップヘッダー文字色 */
+a.nav-link{color: #fff !important;font-size: 18px;}
+
+/* ロゴ調整 */
+.main-sidebar img{width: 50px;margin: 7px 0 0 5px;}
+
+/* メインコンテンツ位置調整 */
+.card-primary{margin-top: 10px;}
+
+/* テキストエリアのサイズ変更不可 */
+textarea{resize: none;}
+
+/* フッター位置調整 */
+footer{text-align:center;}
+
+/* span.explanation{color: #000;font-size: 13px;} */
+
+/* エラーメッセージ（リアルタイム） */
+.err-msg{color: #ff0000;margin-top: -20px;}
+
+.payall-box{
+    font-weight: bold;
+    border: solid #84c3ff 2px;
+    border-radius: 5px;
+    padding: 25px 0 5px 10px;
+    margin: 50px 0;
+}
+
+.pay-all{
+    /* font-size: 18px; */
+    padding-top: 15px;
+    text-align: center;
+}
+
+/* 合計金額 */
+p.pay-ans{
+    font-size: 40px;
+    text-align: center;
+}
+
+/* 合計ポイントタイトル */
+.point-all{
+    font-size: 12px;
+    padding: 30px 0 0 0;
+    text-align: center;
+    color: rgb(119, 119, 119);
+}
+/* 合計ポイント */
+p.total-point{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(119, 119, 119);
+    padding-top: 20px;
+}
+    /* 入力欄タイトル */
+.in-title{
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* エラーリスト表示 */
+p.err-msg-li {
+    margin: 0;
+    color: #000;
+}
+
+.main ul {
+    padding: 0;
+    position: relative;
+    }
+    
+.main ul li {
+    color: #ff0000;
+    border-left: solid 6px #ff0000;/*左側の線*/
+    background: #ffefef;/*背景色*/
+    margin-bottom: 10px;/*下のバーとの余白*/
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1em;
+    list-style-type: none!important;/*ポチ消す*/
+}
+
+.main ul li:first-child {
+    margin-top: -30px;
+}
+
+
+/** レスポンシブ **/
+@media screen and (max-width: 575px) {
+    div.card-body {
+        padding-top: 0;
+    }
+    /* ボタン調整 */
+    button{margin: 10px 0;}
+    /* インプットボックス */
+    .inpoint-box input, select {margin-bottom: 10px;}
+    /* インプットボックス削除 */
+    .input-btn{font-size: 15px;}
+    /* 備考 */
+    .sell-ex{font-size: 13px;}
+    /* エラーメッセージ（リアルタイム） */
+    .err-msg{margin-top: 0;}
+    /* 入力ボックス位置調整 */
+    .in-title {
+        padding-top: 0px;
+        margin-top: 0;
+    }
+    /* 合計金額タイトル */
+    .pay-all:first-child{
+        padding-top: 10px;
+    }
+    .pay-all{
+        padding-top: 0px;
+        margin-top: -5px;
+    }
+    /* 合計金額 */
+    p.pay-ans{
+        padding-top: 0px;
+        margin-top: -5px;
+    }
+    /* 合計ポイントタイトル */
+    .point-all:first-child{
+        padding-top: 30px;
+    }
+    .point-all{
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+    /* 合計ポイント */
+    p.total-point{
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+
+}
+
