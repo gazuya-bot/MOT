@@ -13,19 +13,10 @@
 @section('page_name','売上編集')
 
 @section('content')
-<!-- <div class="container-fluid"> -->
-<!-- <div class="row"> -->
-<!-- left column -->
-<!-- <div class="col-12"> -->
-<!-- general form elements -->
-<div class="card">
+
+<div class="card inbox-size">
     <div class="col-12">
         <div class="card-body">
-
-            <!-- <h3 class="card-title">テックアイエス高校バドミントン部</h3> -->
-            <!-- /.card-header -->
-            <!-- form start -->
-
             <form action="{{route('update_price', $point->id)}}" method="POST" class="form-horizontal">
                 @csrf
                 <div class="card-body">
@@ -39,53 +30,36 @@
                             @endforeach
                         </select>
                     </div>
+
                     <div class="form-group row">
                         <label  class="col-sm-2 col-form-label">売上</label>
                         <input type="text" class="form-control col-sm-10"  value="{{  $point->sale }}" name="sale">
                     </div>
+                    
                     <div class="form-group row">
                         <label  class="col-sm-2 col-form-label">支払いポイント</label>
                         <input type="text" class="form-control col-sm-10" value="{{  $point->pay_point }}" name="pay_point">
                     </div>
+                    
                     <div class="form-group row">
                         <label  class="col-sm-2 col-form-label">付与ポイント</label>
                         <input type="text" class="form-control col-sm-10" value="{{  $point->get_point }}" name="get_point" disabled>
                     </div>
                 </div>
-                <!-- /.card-body -->
 
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-outline-primary float-left">変更</button>
-                    <a href="{{ route('show_analysis') }}">
-                    <button type="button" class="btn btn-outline-secondary float-right">キャンセル</button>
-                    </a>
+                <div class="row form-group row input-btn">
+                    <div class="col-sm-6">
+                        <a href="{{ route('show_analysis') }}">
+                            <button type="button" class="col-sm-12 btn btn-outline-secondary">キャンセル</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-6"><button type="submit" class="col-sm-12 btn btn-outline-primary">変更</button></div>
                 </div>
-
-
             </form>
-
-            <!-- <button class="btn btn-outline-danger float-right">削除</button>
-                    <a href="{{route('show_analysis')}}">
-                        <button class="btn btn-outline-secondary float-right">キャンセル</button>
-                    </a> -->
         </div>
-
-
     </div>
 </div>
 </section>
 </div>
-
-
-<!-- /.card -->
-</div>
-</div>
-<!--/.col (right) -->
-</div>
-<!-- /.row -->
-
-<!-- /.control-sidebar -->
-
-
 
 @stop

@@ -24,7 +24,7 @@ Route::get('/', function () {
 Auth::routes();
 
 
-// 奥村
+// 担当者1
 Route::get('/members/memberlist','MemberController@members')->name('memberlist')->middleware('auth');
 Route::get('/members/sign_up','MemberController@sign_up')->name('sign_up')->middleware('auth');
 Route::post('/members/store','MemberController@store')->name('store');
@@ -35,6 +35,7 @@ Route::get('/members/delete/{id}','MemberController@delete')->name('delete');
 Route::any('/members/destroy/{id}','MemberController@destroy')->name('destroy');
 
 
+// 担当者2
 // ホーム画面 OK
 Route::get('/home', 'PointSaleController@index')->name('home')->middleware('auth');
 
@@ -57,15 +58,9 @@ Route::get('/price_delete/{id}', 'PointSaleController@show_delete_price')->name(
 Route::post('/price_exe_delete{id}', 'PointSaleController@exe_delete_price')->name('delete_price');
 
 
-
-// ポイント登録 OK
-// Route::post('/point_add', 'MotController@add')->middleware('auth');
-
+// 担当者3
 // 会員情報取得(select)
 Route::get('/inpoint', 'MotController@inpoint')->name('inpoint')->middleware('auth');
-
-// 保有ポイント表示（入力画面）未完
-// Route::get('/inpoint', 'MotController@points')->name('points');
 
 // ログアウト OK
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -73,10 +68,5 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 // DB書き込み処理
 Route::post('/point_add_js', 'MotController@add_js')->name('add_js');
 
-
-
-
 // 保有ポイント表示
-
 Route::get('json_data', 'MotController@json_data')->name('json_data');
-// Route::get('/welcome ', 'MotController@index02');

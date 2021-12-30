@@ -27,6 +27,7 @@ class PointSaleController extends Controller
         $points = $this->get_sum_points();
 
         return view('home', ['points' => $points]);
+        
     }
 
 
@@ -297,13 +298,26 @@ class PointSaleController extends Controller
      */
     public function get_sum_points()
     {
-        $points = DB::table('points')
-            ->join('members_lists', 'points.members_id', '=', 'members_lists.id')
-            ->select('members_lists.club_name', DB::raw("sum(points.get_point) as total_points"))
-            ->where('is_delete','=','active')
+        // 顧客の最終購入日時取得 = メンバーリストテーブル
+        $points = DB::table('members_lists')
+            // ポイントテーブルを基準に結合（ポイントテーブルで登録されていない場合はNULL）
+            // メンバーリストテーブルのID と ポイントテーブルのメンバーID を結合する
+            ->leftJoin('points', 'members_lists.id', '=', 'points.members_id')
+            // メンバーリストテーブルのID をグループ化する
             ->groupBy('members_lists.id')
+            // メンバーリストテーブルのID を並び替える（何も指定しない場合は昇順）
+            ->orderBy('members_lists.id')
+            // メンバーリストテーブルのクラブ名(members_lists.club_name)
+            // ポイントテーブルの売上合計(points.sale の総計計算)
+            // ポイントテーブルのトータルポイント(points.total_point)
+            // ポイントテーブルの最終登録日(points.created_at)
+            // を取得する
+            ->select('members_lists.club_name', DB::raw("sum(points.sale) as total_sale"), DB::raw('MAX(points.created_at) as created_at'))
+            // 配列の取得
             ->get();
-
+            // var_dump($points);
+            // exit;
+        // View(/home) に 取得した値を渡す
         return $points;
     }
 

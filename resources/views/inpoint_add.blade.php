@@ -37,11 +37,10 @@
                                         <p class="col-sm-8 total-point">@{{allPoints}}</p>
                                         <p class="col-sm-2 point-all">point</p>
                                     </div>
-
                                 </div>
 
                                 <!-- 登録ボタン押し込み時にバリデーションエラー表示 -->
-                                <div v-if="errors.length">
+                                <div v-if="errors.length"z>
                                     <ul>
                                         <li class="err-msg-li" v-for="error in errors"><span v-text="error"></span></li>
                                     </ul>
@@ -120,24 +119,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 <!-- Vue.jsコード -->
 <script src="{{ asset('/js/vue.js') }}"></script>
-
 <!-- Enterキー無効 -->
 <script src="{{ asset('/js/enter_non.js') }}"></script>
 <!-- 売上ポイントクリア -->
 <script src="{{ asset('/js/clear_text.js') }}"></script>
-<!-- バリデーション -->
-<!-- <script src="{{ asset('/js/validation.js') }}"></script> -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -150,3 +135,21 @@
 @section('js')
     <!-- <script> console.log('Hi!'); </script> -->
 @stop
+
+
+
+
+
+
+
+
+
+<!-- object(Illuminate\Support\Collection)#1214 (1) {
+     ["items":protected]=> array(7) { 
+            [0]=> object(stdClass)#1059 (3) { ["id"]=> int(1) ["club_name"]=> string(9) "未登録" ["created_at"]=> string(19) "2021-12-30 00:05:06" } 
+            [1]=> object(stdClass)#1267 (3) { ["id"]=> int(2) ["club_name"]=> string(7) "A学校" ["created_at"]=> string(19) "2021-12-30 03:51:23" } 
+            [2]=> object(stdClass)#1124 (3) { ["id"]=> int(3) ["club_name"]=> string(7) "B学校" ["created_at"]=> string(19) "2021-12-30 08:43:01" } 
+            [3]=> object(stdClass)#332 (3) { ["id"]=> int(4) ["club_name"]=> string(7) "C学校" ["created_at"]=> string(19) "2021-12-29 23:46:52" } 
+            [4]=> object(stdClass)#1213 (3) { ["id"]=> int(5) ["club_name"]=> string(7) "D学校" ["created_at"]=> string(19) "2021-12-30 06:52:59" } 
+            [5]=> object(stdClass)#652 (3) { ["id"]=> int(6) ["club_name"]=> string(7) "E学校" ["created_at"]=> string(19) "2021-12-29 23:55:08" } 
+            [6]=> object(stdClass)#1020 (3) { ["id"]=> int(7) ["club_name"]=> string(7) "F学校" ["created_at"]=> string(19) "2021-12-29 23:48:04" } } } -->

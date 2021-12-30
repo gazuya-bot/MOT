@@ -13,19 +13,11 @@
 @section('page_name','売上削除')
 
 @section('content')
-<!-- <div class="container-fluid"> -->
-<!-- <div class="row"> -->
-<!-- left column -->
-<!-- <div class="col-12"> -->
-<!-- general form elements -->
-<div class="card">
-    <div class="col-12">
-        <div class="card-body">
 
-            <!-- <h3 class="card-title">テックアイエス高校バドミントン部</h3> -->
-            <!-- /.card-header -->
-            <!-- form start -->
-
+<div class="card inbox-size">
+    <div class="card">
+        <div class="col-12">
+            <div class="card-body">
                 <div class="card-body">
                     <div class="form-group row">
                         <label  class="col-sm-2 col-form-label">学校名/部活名</label>
@@ -44,39 +36,24 @@
                         <label  class="col-sm-2 col-form-label">付与ポイント</label>
                         <p class="form-control col-10">{{ $point->get_point }}</p>
                     </div>
-                    
                 </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                    <form action="{{route('delete_price', $point->id)}}" method="POST">
+                
+                <form class="row form-group row input-btn" action="{{route('delete_price', $point->id)}}" method="POST">
                     @csrf
-                    <button type="submit"  class="btn btn-outline-danger float-left" onclick="return confirm('削除します！')">削除</button>
-                    <a href="{{ route('show_analysis') }}">
-                    <button type="button" class="btn btn-outline-secondary float-right">キャンセル</button>
-                    </a>
-                    </form>
-                </div>
-
-
+                    <div class="col-sm-6">
+                        <a href="{{ route('show_analysis') }}">
+                            <button type="button" class="col-sm-12 btn btn-outline-secondary">キャンセル</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="col-sm-12 btn btn-outline-danger" onclick="return confirm('削除します！')">削除</button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-
     </div>
 </div>
 </section>
 </div>
-
-
-<!-- /.card -->
-</div>
-</div>
-<!--/.col (right) -->
-</div>
-<!-- /.row -->
-
-<!-- /.control-sidebar -->
-
-
 
 @stop

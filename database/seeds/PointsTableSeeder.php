@@ -14,11 +14,11 @@ class PointsTableSeeder extends Seeder
         $param = [
             'members_id' => '2',
             'is_delete' => 'active',
-            'sale' => '1000',
+            'sale' => '1500',
             'pay_point' => '0',
-            'get_point' => '10',
-            'total_point' => '10',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
@@ -26,11 +26,11 @@ class PointsTableSeeder extends Seeder
         $param = [
             'members_id' => '3',
             'is_delete' => 'active',
-            'sale' => '1500',
+            'sale' => '2000',
             'pay_point' => '0',
-            'get_point' => '15',
-            'total_point' => '25',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
@@ -38,11 +38,155 @@ class PointsTableSeeder extends Seeder
         $param = [
             'members_id' => '4',
             'is_delete' => 'active',
-            'sale' => '5000',
+            'sale' => '4000',
             'pay_point' => '0',
-            'get_point' => '50',
-            'total_point' => '50',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '2000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '2700',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-04-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1200',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '5800',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1300',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-05-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1100',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '3900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
@@ -52,9 +196,9 @@ class PointsTableSeeder extends Seeder
             'is_delete' => 'active',
             'sale' => '2500',
             'pay_point' => '0',
-            'get_point' => '25',
-            'total_point' => '75',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
@@ -64,9 +208,81 @@ class PointsTableSeeder extends Seeder
             'is_delete' => 'active',
             'sale' => '3000',
             'pay_point' => '0',
-            'get_point' => '30',
-            'total_point' => '30',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '3900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-06-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1200',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '5600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2300',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3100',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
@@ -76,11 +292,588 @@ class PointsTableSeeder extends Seeder
             'is_delete' => 'active',
             'sale' => '1900',
             'pay_point' => '0',
-            'get_point' => '19',
-            'total_point' => '49',
-            'created_at' => date('Y-m-d H:i:s'),
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-07-01 10:10:10',
             'updated_at' => null
         ];
         DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1800',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '5600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2100',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3200',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '2900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-08-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '4100',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-09-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1800',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '4000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3200',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-10-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '3200',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3100',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-11-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '4900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2600',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2021-12-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '5000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3300',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-01-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '5500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '0',
+            'created_at' => '2022-02-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '2',
+            'is_delete' => 'active',
+            'sale' => '1000',
+            'pay_point' => '0',
+            'get_point' => '10',
+            'total_point' => '160',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '3',
+            'is_delete' => 'active',
+            'sale' => '1500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '190',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '4',
+            'is_delete' => 'active',
+            'sale' => '2000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '536',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '5',
+            'is_delete' => 'active',
+            'sale' => '2500',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '304',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '6',
+            'is_delete' => 'active',
+            'sale' => '3000',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '365',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+
+        $param = [
+            'members_id' => '7',
+            'is_delete' => 'active',
+            'sale' => '1900',
+            'pay_point' => '0',
+            'get_point' => '0',
+            'total_point' => '260',
+            'created_at' => '2022-03-01 10:10:10',
+            'updated_at' => null
+        ];
+        DB::table('points')->insert($param);
+        
     }
 }

@@ -15,27 +15,13 @@ class MemberController extends Controller
     //**顧客一覧 */
     public function members(Request $request)
     {
-        // $members= DB::table('members_lists')->get();
-            
-        // $nsd = DB::table('members_lists')
-        //         ->join('points', 'members_lists.id', '=', 'points.members_id')
-        //         ->select ('members_lists.id', 'points.created_at')
-        //         ->max('points.created_at');
-          
-        // return view('members/memberlist', [
-        //     'members' => $members,
-        //     'nsd' => $nsd,
-        // ]);
         $members = DB::table('members_lists')
             ->leftJoin('points', 'members_lists.id', '=', 'points.members_id')
             ->groupBy('members_lists.id')
             ->orderBy('members_lists.id')
             ->select('members_lists.id', 'members_lists.club_name', DB::raw('MAX(points.created_at) as created_at'))
             ->get();
-        return view('members/memberlist', [
-            'members' => $members
-        ]);
-
+        return view('members/memberlist', ['members' => $members]);
     }
 
 

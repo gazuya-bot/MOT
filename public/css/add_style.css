@@ -2,6 +2,18 @@
 ベースメニューのスタイル 
 **/
 
+/* ホーム */
+.home-box {
+    margin-top: 50px;
+    max-width: 500px;
+}
+
+.home-box button {
+    margin: 10px;
+    padding: 20px 0;
+}
+
+
 /* トップヘッダー背景色 */
 .main-header{background-color:#343a40;}
 
@@ -144,9 +156,6 @@ b, strong {
     margin-bottom: 30px;
 }
 
-/* 備考× */
-/* .inpoint-box span {color: red} */
-
 /* 備考 */
 .sell-ex {font-size: 12px;margin: 3px;}
 
@@ -219,12 +228,12 @@ p.err-msg-li {
     color: #000;
 }
 
-.main ul {
+.err-box ul {
     padding: 0;
     position: relative;
     }
     
-.main ul li {
+.err-box ul li {
     color: #ff0000;
     border-left: solid 6px #ff0000;/*左側の線*/
     background: #ffefef;/*背景色*/
@@ -234,9 +243,84 @@ p.err-msg-li {
     list-style-type: none!important;/*ポチ消す*/
 }
 
-.main ul li:first-child {
+.err-box ul li:first-child {
     margin-top: -30px;
 }
+
+/* 売上管理セレクト */
+.dropdown {
+    margin-top: 50px;
+    padding: 0;
+}
+
+.sale_change button {
+    width: 100%;
+    padding: 4px 3px;
+    /* margin: 2px 0; */
+}
+
+/* 表タイトル */
+.inbox-size th {
+    background-color: #343a40;;
+    color: #fff;
+    text-align: center;
+}
+
+/* 表内の文字位置 */
+.inbox-size td {
+    text-align: center;
+}
+
+.form-group {
+    padding-bottom: 0;
+}
+
+/* 顧客新規登録ボタン修正 */
+a.new-cliant {
+    color: black;
+}
+
+
+/** 時計**/
+/* Google Fonts 読み込み */
+/* @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"); */
+
+/* 全体を囲うコンテナー */
+.container02 {
+    width: 100%;
+    height: 35vh;
+    /* background-color: #15151e; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 時計の共通スタイル */
+.clock {
+    /* font-family: 'Share Tech Mono', monospace; */
+    font-family: 'Orbitron', sans-serif;
+    color: #000000;
+    /* text-shadow: 0 0 20px #e4f9ff; */
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* 日付のスタイル */
+.clock-date {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* 時間のスタイル */
+.clock-time {
+    font-size: 100px; 
+    margin-top: 45px;
+}
+
+
+
+
 
 
 /** レスポンシブ **/
@@ -285,6 +369,44 @@ p.err-msg-li {
         padding-top: 0px;
         margin-top: -10px;
     }
+
+    .clock-date {
+        font-size: 5vw;
+    }
+    .clock-time {
+        font-size: 20vw;
+    }
+
+    /* ボタン調整 */
+    .sale_change button {
+        margin: 2px 0;
+    }
+
+    .container {
+        height: 25vh;
+    }
+
+    /* 日付のスタイル */
+    .clock-date {
+        font-size: 20px;
+    }
+
+    /* 時間のスタイル */
+    .clock-time {
+        font-size: 50px; 
+    }
+
+    /* ホーム */
+    .home-box {
+        margin-top: 30px;
+        max-width: 280px;
+    }
+
+    .home-box button {
+        margin: 10px;
+        padding: 15px 0;
+    }
+}
 
 }
 

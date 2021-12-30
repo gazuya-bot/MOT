@@ -13,83 +13,15 @@
 
 @section('page_name','売上管理')
 
-@section('content_header')
-<h6 style="text-align: center;"><?php if (isset($member_name)){ echo $member_name->club_name;}else{echo '全て';}?></h6>
-@stop
 
 @section('content')
 
-
-<!-- モーダルウィンドウの中身 -->
-
-<!-- @if(Session::has('flashmessage'))
-<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                {{ session('flashmessage') }}
-            </div>
-            <div class="modal-footer text-center">
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    $(window).on('load', function() {
-        $('#Modal').modal('show');
-    });
-</script>
-@endif -->
-
-
-
-
 <div class="row">
-    
-    <div class="col-12">
-
-        <!-- BAR CHART -->
-        <div class="card-body">
-            <div class="card-header">
-                <h3 class="card-title">月別売上</h3>
-
-                
-            </div>
-            <div class="card-body">
-                <div class="chart">
-                    <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main content -->
-
-
     <div class="col-12">
         <div class="card-body">
-            <div class="card-header">
-                <h3 class="card-title">データ一覧</h3>
-            </div>
             <!-- /.card-header -->
-            <div class="card-body">
-                <div class="dropdown">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                        選択してください
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{url('/sales_management')}}" aria-selected="true">全て</a>
-                        @foreach($members_lists as $members_list)
-                        <a class="dropdown-item" href="{{url('/sales_management',$members_list->id)}}">{{ $members_list->club_name }}</a>
-                        @endforeach
-                    </div>
-                </div>
-                <table id="example1" class="table table-bordered table-striped">
+            <div class="card-body inbox-size">
+                <table id="example1" class="table table-bordered">
                     <thead>
                         <tr>
                             <th>日時</th>
@@ -99,35 +31,37 @@
                             <th>支払いポイント</th>
                             <th>獲得ポイント</th>
                             <th></th>
-
-
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($points as $point)
-                        <tr>
-                        <td>{{ $point->created_at }}</td>
+                        <tr class="">
+                            <td>{{ $point->created_at }}</td>
                             <td>{{ $point->club_name }}</td>
                             <td>{{ $point->sale }} 円</td>
                             <td>{{ $point->pay_cash }} 円</td>
                             <td>{{ $point->pay_point }} pt</td>
                             <td>{{ $point->get_point }} pt</td>
 
-                            <td>
-                                <div class="text-center">
-                                    <a href="{{ url('/price_edit', $point->id) }}">
-                                        <button type="submit" class="btn btn-outline-primary btn-sm">編集</button>
+                            <td class="row">
+                                <div class="col-sm-6 sale_change">
+                                    <a href="{{ url('/price_edit', $point->id) }}" class="">
+                                        <button type="submit" class="btn btn-outline-primary">編集</button>
                                     </a>
-                                    <a href="{{ url('/price_delete', $point->id) }}">
-                                        <button type="submit" class="btn btn-outline-danger btn-sm">削除</button>
+                                </div>
+                                <div class="col-sm-6 sale_change">
+                                    <a href="{{ url('/price_delete', $point->id) }}" class="">
+                                        <button type="submit" class="btn btn-outline-danger">削除</button>
                                     </a>
                                 </div>
                             </td>
                         </tr>
                         @endforeach
-
-
                 </table>
+
+
+
+
             </div>
             <!-- /.card-body -->
         </div>

@@ -9,6 +9,14 @@ new Vue({
         // maxTextCount: 10,
         members: '',
         totals: [], // すべてのポイントで支払い
+
+        name: '',
+        options: [
+            '太郎',
+            '次郎',
+            '三郎',
+            '花子'
+        ]
     },
     methods: {
         // 売上入力欄の追加
