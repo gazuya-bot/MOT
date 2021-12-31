@@ -24,7 +24,7 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="inputclubname" class="col-sm-2 col-form-label">学校名 / 部活名</label>
+                        <label for="inputclubname" class="col-sm-2 col-form-label">事業所名</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="inputclubname" name="club_name" value="{{ $member->club_name }}">
 

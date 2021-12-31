@@ -15,7 +15,7 @@ class MotController extends Controller
     // 会員情報取得
     public function inpoint()
     {
-        // 顧客名
+        // 事業所名
         $members = Member_list::orderby('id', 'asc')->get();
         // 保有ポイント
         $total_points = Point::orderby('id', 'asc')

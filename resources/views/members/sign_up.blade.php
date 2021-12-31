@@ -26,9 +26,9 @@
             @csrf
                 <div class="card-body">
                     <div class="form-group row">
-                        <label for="inputclubname" class="col-sm-2 col-form-label">学校名 / 部活名</label>
+                        <label for="inputclubname" class="col-sm-2 col-form-label">事業所名</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="club_name" id="inputclubname" placeholder="学校名 / 部活名" value="{{ old('club_name') }}">
+                            <input type="text" class="form-control" name="club_name" id="inputclubname" placeholder="事業所名" value="{{ old('club_name') }}">
 
                             @error('club_name')
                             <p class="error_message" style="color:red">{{ $message}}</p>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="row form-group row input-btn">
-                    <div class="col-sm-6"><a class="new-cliant" href="{{ route('memberlist') }}"><button type="submit" class="col-sm-12 btn btn-outline-secondary float-left">{{ __('キャンセル') }}</button></a></div>
+                    <div class="col-sm-6"><a class="new-cliant" href="/members/memberlist"><button type="button" class="col-sm-12 btn btn-outline-secondary float-left">キャンセル</button></a></div>
                     <div class="col-sm-6"><button type="submit" class="col-sm-12 btn btn-outline-primary float-right">登録</button></div>
                 </div>
             </form>

@@ -40,15 +40,15 @@
                                 </div>
 
                                 <!-- 登録ボタン押し込み時にバリデーションエラー表示 -->
-                                <div v-if="errors.length"z>
+                                <div v-if="errors.length" class="err-box">
                                     <ul>
                                         <li class="err-msg-li" v-for="error in errors"><span v-text="error"></span></li>
                                     </ul>
                                 </div>
 
-                                <!-- 顧客名 -->
+                                <!-- 事業所名 -->
                                 <div class="form-group row add-box">
-                                    <div class="col-sm-2 in-title"><label for="sale" class="col-form-label">顧客名</label></div>
+                                    <div class="col-sm-2 in-title"><label for="sale" class="col-form-label">事業所名</label></div>
                                     <div class="col-sm-10">
                                         <div class="form-group row add-box">
                                             <select class="col-10 form-control rounded-0" id="client" name="members_id" v-model="members_id" @change="nonePoint">

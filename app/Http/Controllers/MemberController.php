@@ -43,10 +43,8 @@ class MemberController extends Controller
             'tel'=>'required|max:11|unique:members_lists',
         ]);
 
-        //$memo = isset($request->memo) ? $request->memo : "";
         $fax = $request->fax ?? "";
         $memo = $request->memo ?? "";
-        //$memo = 条件式 ? 式1 : 式2
 
         $member->club_name = $request->club_name;
         $member->email = $request->email;
@@ -55,6 +53,7 @@ class MemberController extends Controller
         $member->tel = $request->tel;
         $member->fax = $fax;
         $member->memo = $memo;
+        $member->created_at = date('Y-m-d H:i:s');
 
         $member->save();
 

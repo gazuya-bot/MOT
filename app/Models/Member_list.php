@@ -15,7 +15,7 @@ class Member_list extends Model
         'name',
         'tel',
         'fax',
-        'memo'
+        'memo',
     ];
 
 

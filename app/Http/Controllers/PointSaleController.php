@@ -13,23 +13,15 @@ use Illuminate\Support\Facades\DB;
 
 class PointSaleController extends Controller
 {
-
-
-
     /**
      * ホーム画面表示
      * 
      */
     public function index()
     {
-
-        // 顧客名と保有ポイントを取得
-        $points = $this->get_sum_points();
-
-        return view('home', ['points' => $points]);
-        
+        // 事業所名と保有ポイントを取得
+        return view('home'); 
     }
-
 
     /**
      * 売上管理画面表示
@@ -38,7 +30,6 @@ class PointSaleController extends Controller
     {
         $year =date('Y');
         $Nextyear = $year+1;
-
         $months = [
             $year."-04",
             $year."-05",
@@ -62,7 +53,6 @@ class PointSaleController extends Controller
             $sum = $this->get_month_sales($month);
             $sum_sales[] = $sum;
         }
-
         $label = [
             "4月",
             "5月",
@@ -78,30 +68,23 @@ class PointSaleController extends Controller
             "3月"
         ];
 
-
-       // 顧客名一覧を取得
+       // 事業所名一覧を取得
         $members_lists = $this->get_members_list();
-    
         return view('sales_management.analysis', [
             'points' => $points,
             'label' => $label,
             'sum_sales' => $sum_sales,
             'members_lists' => $members_lists
         ]);
-
     }
-
 
     /**
      * 売上管理画面表示（顧客別）
      */
     public function show_analysis_id($id)
     {
-        
-
         $year =date('Y');
         $Nextyear = $year+1;
-
         $months = [
             $year."-04",
             $year."-05",
@@ -117,19 +100,14 @@ class PointSaleController extends Controller
             $Nextyear."-03"
         ];
 
-
         // 売上一覧を取得
         
         $points = $this->get_sale_list($id,$year,$Nextyear);
-
         $sum_sales = [];
-
         foreach ($months as $month) {
             $sum = $this->get_month_sale_mem($month,$id);
-            $sum_sales[] = $sum;
-            
+            $sum_sales[] = $sum; 
         }
-
         $label = [
             "4月",
             "5月",
@@ -145,13 +123,9 @@ class PointSaleController extends Controller
             "3月"
         ];
 
-
-
-       // 顧客名一覧を取得
+       // 事業所名一覧を取得
         $members_lists = $this->get_members_list();
-
         $member_name = $this->get_member_name($id);
-
         return view('sales_management.analysis', compact(
             'points',
             'label',
@@ -159,29 +133,19 @@ class PointSaleController extends Controller
             'members_lists',
             'member_name'
         ));
-
-    
     }
-
-
 
     /**
      * 売上編集画面表示
      */
     public function show_edit_price($id)
     {
-
         // 該当する売上データを取得
         $point = $this->get_sale_data($id);
-
-        // 顧客名一覧を取得
+        // 事業所名一覧を取得
         $members_lists = $this->get_members_list();
-
-
-
         return view('sales_management.price-edit', ['point' => $point, 'members_lists' => $members_lists]);
     }
-
 
     /**
      * 売上を更新
@@ -194,21 +158,17 @@ class PointSaleController extends Controller
         $pay_point = $request->pay_point;
         // 該当データの取得
         $point = Point_sale::find($id);
-
         $point->members_id = $request->members_id;
         $point->sale = $sale;
         $point->pay_cash = $sale-$pay_point;
         $point->pay_point = $pay_point;
         $point->get_point = ($sale - $pay_point)*0.01;
         $point->updated_at = $updated_at;
-
         // 更新する
         $point->save();
-
         return redirect(route('show_analysis'))->with('flashmessage', '変更を保存しました');
     }
 
-    
     /**
      * 売上削除画面表示
      */
@@ -216,8 +176,6 @@ class PointSaleController extends Controller
     {
         // 該当する売上データを取得
         $point = $this->get_sale_data($id);
-
-
         return view('sales_management.price-delete', [
             'point' => $point
         ]);
@@ -229,96 +187,48 @@ class PointSaleController extends Controller
     public function exe_delete_price($id)
     {
         $point =  Point_sale::find($id);
-
         //$point->delete();
         $point->is_delete = 'deleted';
         $point->save();
 
-
         return redirect(route('show_analysis'))->with('flashmessage', '削除しました');
     }
-
-
-
-
-
 
     /**
      * 月別売上
      */
     public function get_month_sales($month)
     {
-
         $record = DB::table('points')
             ->where("points.created_at", "like", $month . "%")
             ->where('is_delete','=','active')
             ->get();
-
         $count = $record->count();
         $sum = 0;
         for ($i = 0; $i < $count; $i++) {
             $sum = $record->sum("sale");
         }
-
-
         return $sum;
     }
-
-
 
     /**
      * 月別売上（顧客別）
      */
     public function get_month_sale_mem($month,$id)
     {
-        
         $record = DB::table('points')
             ->join('members_lists', 'points.members_id', '=', 'members_lists.id')
             ->where("points.created_at", "like", $month . "%")
             ->where('members_lists.id', $id)
             ->where('is_delete','=','active')
             ->get();
-
-        
         $count = $record->count();
         $sum = 0;
 
         for ($i = 0; $i < $count; $i++) {
             $sum = $record->sum("sale");
         }
-
         return $sum;
-    }
-
-
-    /**
-     * 顧客名と保有ポイント取得
-     * 
-     * @return array $point
-     */
-    public function get_sum_points()
-    {
-        // 顧客の最終購入日時取得 = メンバーリストテーブル
-        $points = DB::table('members_lists')
-            // ポイントテーブルを基準に結合（ポイントテーブルで登録されていない場合はNULL）
-            // メンバーリストテーブルのID と ポイントテーブルのメンバーID を結合する
-            ->leftJoin('points', 'members_lists.id', '=', 'points.members_id')
-            // メンバーリストテーブルのID をグループ化する
-            ->groupBy('members_lists.id')
-            // メンバーリストテーブルのID を並び替える（何も指定しない場合は昇順）
-            ->orderBy('members_lists.id')
-            // メンバーリストテーブルのクラブ名(members_lists.club_name)
-            // ポイントテーブルの売上合計(points.sale の総計計算)
-            // ポイントテーブルのトータルポイント(points.total_point)
-            // ポイントテーブルの最終登録日(points.created_at)
-            // を取得する
-            ->select('members_lists.club_name', DB::raw("sum(points.sale) as total_sale"), DB::raw('MAX(points.created_at) as created_at'))
-            // 配列の取得
-            ->get();
-            // var_dump($points);
-            // exit;
-        // View(/home) に 取得した値を渡す
-        return $points;
     }
 
     /**
@@ -337,8 +247,6 @@ class PointSaleController extends Controller
         return $points;
     }
 
-
-
     /**
      * 売上一覧データ取得（顧客別）
      */
@@ -356,8 +264,6 @@ class PointSaleController extends Controller
         return $points;
     }
 
-
-
     /**
      * 売上詳細データ取得
      */
@@ -372,8 +278,6 @@ class PointSaleController extends Controller
 
         return $point;
     }
-
-
 
     /**
      * 顧客一覧を取得
@@ -398,6 +302,4 @@ class PointSaleController extends Controller
         return $member_name;
     }
 
-
-    
 }

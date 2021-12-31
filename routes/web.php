@@ -17,12 +17,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
-
 
 // 担当者1
 Route::get('/members/memberlist','MemberController@members')->name('memberlist')->middleware('auth');
@@ -36,10 +31,10 @@ Route::any('/members/destroy/{id}','MemberController@destroy')->name('destroy');
 
 
 // 担当者2
-// ホーム画面 OK
+// ホーム画面
 Route::get('/home', 'PointSaleController@index')->name('home')->middleware('auth');
 
-// 売上分析画面 OK
+// 売上分析画面
 Route::get('/sales_management', 'PointSaleController@show_analysis')->name('show_analysis')->middleware('auth');
 
 // 顧客別の売上分析画面
@@ -62,7 +57,7 @@ Route::post('/price_exe_delete{id}', 'PointSaleController@exe_delete_price')->na
 // 会員情報取得(select)
 Route::get('/inpoint', 'MotController@inpoint')->name('inpoint')->middleware('auth');
 
-// ログアウト OK
+// ログアウト
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // DB書き込み処理

@@ -24,7 +24,7 @@
                     <thead>
                         <tr>
                             <th>日時</th>
-                            <th>顧客名</th>
+                            <th>事業所名</th>
                             <th>売上</th>
                             <th>支払い金額</th>
                             <th>支払いポイント</th>
@@ -75,77 +75,22 @@
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('vendor/adminlte/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 
-
 <script>
-
     var barlabel = <?php echo json_encode($label); ?>;
-
     var sum_sales = <?php echo json_encode($sum_sales); ?>;
-
-
-
-
 
     $(function() {
         $("#example1").DataTable({
             "responsive": true,
             "lengthChange": false,
-            "autoWidth": false,
+            "autoWidth": true,
             'language': {
                 'url': "https://cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Japanese.json"
             },
 
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-        });
+
     });
-
-    var areaChartData = {
-        labels: barlabel,
-        datasets: [{
-            label: '売上',
-            backgroundColor: 'rgba(60,141,188,0.9)',
-            borderColor: 'rgba(60,141,188,0.8)',
-            pointRadius: false,
-            pointColor: '#3b8bba',
-            pointStrokeColor: 'rgba(60,141,188,1)',
-            pointHighlightFill: '#fff',
-            pointHighlightStroke: 'rgba(60,141,188,1)',
-            data: sum_sales
-        }]
-    }
-
-
-
-
-    //-------------
-    //- BAR CHART -
-    //-------------
-    var barChartCanvas = $('#barChart').get(0).getContext('2d')
-    var barChartData = $.extend(true, {}, areaChartData)
-    //var temp0 = areaChartData.datasets[0]
-    //var temp1 = areaChartData.datasets[1]
-    //barChartData.datasets[0] = temp1
-    //barChartData.datasets[1] = temp1
-
-    var barChartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        datasetFill: false
-    }
-
-    new Chart(barChartCanvas, {
-        type: 'bar',
-        data: barChartData,
-        options: barChartOptions
-    })
 
 </script>
 @stop

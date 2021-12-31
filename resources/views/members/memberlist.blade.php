@@ -26,7 +26,7 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>顧客名</th>
+                                <th>名</th>
                                 <th>最終購入日</th>
                                 <th></th>
                             </tr>

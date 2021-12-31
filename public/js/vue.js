@@ -216,6 +216,8 @@ new Vue({
                     var ans = all_point;
                     var test = Number(ans.total_point);
                     return test;
+                } else {
+                    return 0;
                 }
             }
         }

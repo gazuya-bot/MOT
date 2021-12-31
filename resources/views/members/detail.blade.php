@@ -19,7 +19,7 @@
                     <div class="card-body">
                     <table id="example2" class="table table-bordere">
                         <tr style="text-align: center;"><th>ID</th><td>{{ $member->id }}</td></tr>
-                        <tr style="text-align: center;"><th>学校名 / 部活名</th><td>{{ $member->club_name }}</td></tr>
+                        <tr style="text-align: center;"><th>事業所名</th><td>{{ $member->club_name }}</td></tr>
                         <tr style="text-align: center;"><th>メールアドレス</th><td>{{ $member->email }}</td></tr>
                         <tr style="text-align: center;"><th>住所</th><td>{{ $member->address }}</td></tr>
                         <tr style="text-align: center;"><th>顧問名</th><td>{{ $member->name }}</td></tr>
