@@ -22,11 +22,11 @@
         <div class="col-12">
             <div class="card-body">
                 <div class="card-body inbox-size">
-                    <table id="example1" class="table table-bordered">
+                    <table id="example1" class="table">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>学校名 / 部活名</th>
+                                <th>顧客名</th>
                                 <th>最終購入日</th>
                                 <th></th>
                             </tr>
@@ -34,25 +34,15 @@
                         <tbody>
                             @foreach($members as $member)
                                 <tr data-href="{{ route('detail', ['id'=>$member->id]) }}">
-                                    <td>
-                                        {{ $member->id }}
-                                    </td>
-                                    <td>
-                                        {{ $member->club_name }}
-                                    </td>
-                                    <td>
-                                        {{ $member->created_at }}
-                                    </td>
+                                    <td>{{ $member->id }}</td>
+                                    <td>{{ $member->club_name }}</td>
+                                    <td>{{ $member->created_at }}</td>
                                     <td class="row">
                                         <div class="col-md-6 sale_change cliant_change">
-                                            <a href="{{ route('edit',['id'=>$member->id]) }}">
-                                                <button class="btn btn-outline-primary">{{ __('編集') }}</button>
-                                            </a>
+                                            <a href="{{ route('edit',['id'=>$member->id]) }}">編集</a>
                                         </div>
-                                        <div class="col-md-6 sale_change cliant_delete">
-                                            <a href="{{ route('delete',['id'=>$member->id]) }}">
-                                                <button class="btn btn-outline-danger">{{ __('削除') }}</button>
-                                            </a>
+                                        <div class="col-md-6 sale_change delete_link">
+                                            <a href="{{ route('delete',['id'=>$member->id]) }}">削除</a>
                                         </div>
                                     </td>
                                 </tr>

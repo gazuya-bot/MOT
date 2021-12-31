@@ -19,9 +19,8 @@
 <div class="row">
     <div class="col-12">
         <div class="card-body">
-            <!-- /.card-header -->
             <div class="card-body inbox-size">
-                <table id="example1" class="table table-bordered">
+                <table id="example1" class="table">
                     <thead>
                         <tr>
                             <th>日時</th>
@@ -45,33 +44,20 @@
 
                             <td class="row">
                                 <div class="col-sm-6 sale_change">
-                                    <a href="{{ url('/price_edit', $point->id) }}" class="">
-                                        <button type="submit" class="btn btn-outline-primary">編集</button>
-                                    </a>
+                                    <a href="{{ url('/price_edit', $point->id) }}" class="">編集</a>
                                 </div>
-                                <div class="col-sm-6 sale_change">
-                                    <a href="{{ url('/price_delete', $point->id) }}" class="">
-                                        <button type="submit" class="btn btn-outline-danger">削除</button>
-                                    </a>
+                                <div class="col-sm-6 delete_link">
+                                    <a href="{{ url('/price_delete', $point->id) }}" class="delete_link">削除</a>
                                 </div>
                             </td>
                         </tr>
                         @endforeach
                 </table>
-
-
-
-
             </div>
-            <!-- /.card-body -->
         </div>
-        <!-- /.card-body -->
     </div>
 </div>
-<!-- /.content-wrapper -->
 
-
-<!-- ./wrapper -->
 @stop
 
 @section('js')

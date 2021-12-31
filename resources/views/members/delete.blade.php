@@ -22,7 +22,7 @@
         <div class="col-12">
             <div class="card-body">
                 <div class="card-body">                              
-                    <table id="example2" class="table table-bordered">
+                    <table id="example2" class="table table-bordered d_cliant">
                         <tr style="text-align: center;"><th>ID</th><td>{{ $member->id }}</td></tr>
                         <tr style="text-align: center;"><th>学校名 / 部活名</th><td>{{ $member->club_name }}</td></tr>
                         <tr style="text-align: center;"><th>メールアドレス</th><td>{{ $member->email }}</td></tr>
@@ -59,8 +59,6 @@
 
 @section('js')
 <script>
-    console.log('Hi!'); 
-
     $(function () {
         bsCustomFileInput.init();
     });

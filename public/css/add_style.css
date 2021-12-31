@@ -280,11 +280,20 @@ a.new-cliant {
     color: black;
 }
 
+/* 削除リンク */
+.delete_link a {
+    color: #ff0000;
+}
+
+.delete_link a:hover {
+    color: #970808;
+}
+
+.d_cliant th{
+    width: 200px;
+}
 
 /** 時計**/
-/* Google Fonts 読み込み */
-/* @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"); */
-
 /* 全体を囲うコンテナー */
 .container02 {
     width: 100%;
@@ -318,10 +327,10 @@ a.new-cliant {
     margin-top: 45px;
 }
 
-
-
-
-
+/* ログインエラー調整 */
+span.invalid-feedback strong {
+    font-size: 15px;
+}
 
 /** レスポンシブ **/
 @media screen and (max-width: 575px) {
