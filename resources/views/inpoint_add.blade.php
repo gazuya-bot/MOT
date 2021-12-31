@@ -51,7 +51,7 @@
                                     <div class="col-sm-2 in-title"><label for="sale" class="col-form-label">事業所名</label></div>
                                     <div class="col-sm-10">
                                         <div class="form-group row add-box">
-                                            <select class="col-10 form-control rounded-0" id="client" name="members_id" v-model="members_id" @change="nonePoint">
+                                            <select class="col-10 form-control" id="client" name="members_id" v-model="members_id" @change="nonePoint">
                                                 <option></option>
                                                 @foreach($members as $member)
                                                     <option value={{ $member->id }} >{{ $member->club_name }}</option>
