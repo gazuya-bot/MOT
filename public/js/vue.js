@@ -9,14 +9,7 @@ new Vue({
         // maxTextCount: 10,
         members: '',
         totals: [], // すべてのポイントで支払い
-
-        name: '',
-        options: [
-            '太郎',
-            '次郎',
-            '三郎',
-            '花子'
-        ]
+        checks: '0' // メンバーID照合チェック
     },
     methods: {
         // 売上入力欄の追加
@@ -75,7 +68,7 @@ new Vue({
             axios.get(url)
                 .then(response => {
                     this.totals = response.data.total_points;
-                    console.log(this.totals);
+                    // console.log(this.totals);
                 });
         },
 
@@ -209,16 +202,20 @@ new Vue({
 
         // 顧客ごとの保有ポイント検索
         allPoints() {
+            this.checks = [];
             for(var i in this.totals) {
                 var user = this.totals[i];
                 if(user.members_id == this.members_id) {
                     var all_point = user;
                     var ans = all_point;
                     var test = Number(ans.total_point);
+                    this.checks = 1;
+                    console.log('test01');
                     return test;
-                } else {
-                    return 0;
                 }
+            }
+            if (this.checks == 0) {
+                return 0;
             }
         }
 
