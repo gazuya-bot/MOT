@@ -36,8 +36,8 @@
                         <form class="row form-group row input-btn" method="POST" action="{{ route('destroy', ['id'=>$member->id]) }}">
                             @csrf
                             <div class="col-sm-6">
-                                <a href="{{ route('memberlist') }}">
-                                    <button type="submit" class="btn btn-outline-secondary col-sm-12">キャンセル</button>
+                                <a href="/members/memberlist">
+                                    <button type="button" class="btn btn-outline-secondary col-sm-12">キャンセル</button>
                                 </a>
                             </div>
                             <div class="col-sm-6">
@@ -66,7 +66,7 @@
     });
 
     $('#delete').click(function(){
-        if(!confirm('削除します！')){
+        if(!confirm('削除しますか？')){
         /* キャンセルの時の処理 */
             return false;
         }else{

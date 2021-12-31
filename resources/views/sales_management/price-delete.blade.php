@@ -46,7 +46,7 @@
                         </a>
                     </div>
                     <div class="col-sm-6">
-                        <button type="submit" class="col-sm-12 btn btn-outline-danger" onclick="return confirm('削除します！')">削除</button>
+                        <button type="submit" class="col-sm-12 btn btn-outline-danger" onclick="return confirm('')">削除</button>
                     </div>
                 </form>
             </div>

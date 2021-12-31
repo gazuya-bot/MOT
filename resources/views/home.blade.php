@@ -19,7 +19,7 @@
 @section('content')
 
 <div class="home-box container-fluid">
-
+    <!-- 時計 -->
     <div class="container02">
         <div class="clock">
         <p class="clock-date"></p>
@@ -27,88 +27,34 @@
         </div>
     </div>
 
-
-
-    <!-- <div class="col-md-12">
-        <div class="row form-group row">
-            <div class="col-sm-12">
-                <h1 class="col-sm-12 clock">20:00</h1>
-            </div>
-        </div>             -->
-
-        <div class="row form-group row">
-            <div class="col-sm-12">
+    <!-- 売上ポイント登録ボタン -->
+    <div class="row form-group row">
+        <a href="/inpoint" class="col-sm-12">
+            <div>
                 <button type="button" class="btn btn-outline-dark col-sm-12">売上ポイント登録</button>
             </div>
-        </div>
+        </a>
+    </div>
 
-        <div class="row form-group row">
-            <div class="col-sm-12">
+    <!-- 売上管理ボタン -->
+    <div class="row form-group row">
+        <a href="/sales_management" class="col-sm-12">
+            <div>
                 <button type="button" class="btn btn-outline-dark col-sm-12">売上管理</button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-info col-sm-12">編集</button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-danger col-sm-12">削除</button>
-            </div>
-        </div>
+        </a>
+    </div>
 
-        <div class="row form-group row">
-            <div class="col-sm-12">
-                <button type="button" class="btn btn-outline-dark col-sm-12">顧客管理</button>
+    <!-- 顧客一覧ボタン -->
+    <div class="row form-group row">
+        <a href="/members/memberlist" class="col-sm-12">
+            <div>
+                <button type="button" class="btn btn-outline-dark col-sm-12">顧客一覧</button>
             </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-info col-sm-12">編集</button>
-            </div>
-            <div class="col-6">
-                <button type="button" class="btn btn-outline-danger col-sm-12">削除</button>
-            </div>
-        </div>
-
+        </a>
     </div>
 </div>
 
-<script>
-    const clock = () => {
-    // 現在の日時・時刻の情報を取得
-    const d = new Date();
-
-    // 年を取得
-    let year = d.getFullYear();
-    // 月を取得
-    let month = d.getMonth() + 1;
-    // 日を取得
-    let date = d.getDate();
-    // 曜日を取得
-    let dayNum = d.getDay();
-    const weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    let day = weekday[dayNum];
-    // 時を取得
-    let hour = d.getHours();
-    // 分を取得
-    let min = d.getMinutes();
-    // 秒を取得
-    let sec = d.getSeconds();
-
-    // 1桁の場合は0を足して2桁に
-    month = month < 10 ? "0" + month : month;
-    date = date < 10 ? "0" + date : date;
-    hour = hour < 10 ? "0" + hour : hour;
-    min = min < 10 ? "0" + min : min;
-    sec = sec < 10 ? "0" + sec : sec;
-
-    // 日付・時刻の文字列を作成
-    let today = `${year}.${month}.${date} ${day}`;
-    let time = `${hour}:${min}:${sec}`;
-
-    // 文字列を出力
-    document.querySelector(".clock-date").innerText = today;
-    document.querySelector(".clock-time").innerText = time;
-    };
-
-    // 1秒ごとにclock関数を呼び出す
-    setInterval(clock, 1000);
-</script>
+<script src="{{ asset('/js/clock.js') }}"></script>
 
 @stop
