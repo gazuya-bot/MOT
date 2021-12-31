@@ -83,7 +83,7 @@
         $("#example1").DataTable({
             "responsive": true,
             "lengthChange": false,
-            "autoWidth": true,
+            "autoWidth": false,
             'language': {
                 'url': "https://cdn.datatables.net/plug-ins/3cfcc339e89/i18n/Japanese.json"
             },

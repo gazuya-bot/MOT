@@ -333,7 +333,7 @@ span.invalid-feedback strong {
 }
 
 /** レスポンシブ **/
-@media screen and (max-width: 524px) {
+@media screen and (max-width: 1024px) {
     .card-body {
         padding: 0;
     }
