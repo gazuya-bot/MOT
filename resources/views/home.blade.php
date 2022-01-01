@@ -28,7 +28,7 @@
     </div>
 
     <!-- 売上ポイント登録ボタン -->
-    <div class="row form-group row">
+    <div class="row form-group">
         <a href="/inpoint" class="col-sm-12">
             <div>
                 <button type="button" class="btn btn-outline-dark col-sm-12">売上ポイント登録</button>
@@ -37,7 +37,7 @@
     </div>
 
     <!-- 売上管理ボタン -->
-    <div class="row form-group row">
+    <div class="row form-group">
         <a href="/sales_management" class="col-sm-12">
             <div>
                 <button type="button" class="btn btn-outline-dark col-sm-12">売上管理</button>
@@ -46,12 +46,17 @@
     </div>
 
     <!-- 顧客一覧ボタン -->
-    <div class="row form-group row">
-        <a href="/members/memberlist" class="col-sm-12">
-            <div>
-                <button type="button" class="btn btn-outline-dark col-sm-12">顧客一覧</button>
-            </div>
-        </a>
+    <div class="row form-group">
+        <div class="col-8">
+            <a href="/members/memberlist">
+                <button type="button" class="btn btn-outline-dark col-12">顧客一覧</button>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="/members/sign_up">
+                <button type="button" class="btn btn-outline-dark col-12">新規登録</button>
+            </a>
+        </div>
     </div>
 </div>
 
