@@ -415,4 +415,8 @@ span.invalid-feedback strong {
         margin: 10px;
         padding: 15px 0;
     }
+
+    .card-body {
+        margin: 0 auto;
+    }
 }
