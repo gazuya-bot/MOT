@@ -11,7 +11,7 @@
     <div class="login-box">
 
         <div class="login-logo">
-            <img src="{{asset('img/MOT_01.gif')}}" alt="ロゴ">
+            <img src="{{asset('img/MOT_02.png')}}" alt="ロゴ">
             <p><b>ver 2.00</b></p>
         </div>
 
