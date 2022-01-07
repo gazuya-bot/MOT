@@ -12,7 +12,7 @@
 
         <div class="login-logo">
             <img src="{{asset('img/MOT_02.png')}}" alt="ロゴ">
-            <p><b>ver 2.00</b></p>
+            <p><b>ver 2.01</b></p>
         </div>
 
         <div class="card">
